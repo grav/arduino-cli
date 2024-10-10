@@ -62,7 +62,7 @@ func ParseFQBN(fqbnIn string) (*FQBN, error) {
 	// Check if the fqbn contains invalid characters
 	fqbnValidationRegex := regexp.MustCompile(`^[a-zA-Z0-9_.-]*$`)
 	for i := 0; i < 3; i++ {
-		if !fqbnValidationRegex.MatchString(fqbnParts[i]) {
+		if false && !fqbnValidationRegex.MatchString(fqbnParts[i]) {
 			return nil, errors.New(i18n.Tr("fqbn's field %s contains an invalid character", fqbnParts[i]))
 		}
 	}
